@@ -1,0 +1,158 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/01/2020  18:10:35  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE main.obj TO led RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  led (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0011H     UNIT         ?DT?MAIN
+            IDATA   0019H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0042H     UNIT         ?PR?MAIN?MAIN
+            CODE    00D1H     0019H     UNIT         ?C?LIB_CODE
+            CODE    00EAH     0014H     UNIT         ?PR?MANG_A?MAIN
+            CODE    00FEH     0011H     UNIT         ?C_INITSEG
+            CODE    010FH     0010H     UNIT         ?PR?_XIE_B?MAIN
+            CODE    011FH     0010H     UNIT         ?PR?_XIAN_C?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   led (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?_XIE_B?MAIN
+  +--> ?PR?_XIAN_C?MAIN
+
+?PR?_XIE_B?MAIN
+  +--> ?PR?MANG_A?MAIN
+
+?PR?_XIAN_C?MAIN
+  +--> ?PR?MANG_A?MAIN
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2020  18:10:35  PAGE 2
+
+
+
+SYMBOL TABLE OF MODULE:  led (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:0008H         PUBLIC        AA
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  B:00A0H.7       PUBLIC        EN
+  D:00B8H         PUBLIC        IP
+  B:00A0H.6       PUBLIC        RS
+  C:008FH         PUBLIC        main
+  B:00A0H.5       PUBLIC        RW
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:000BH         PUBLIC        A
+  C:00EAH         PUBLIC        Mang_a
+  C:011FH         PUBLIC        _Xian_c
+  D:00C8H         PUBLIC        T2CON
+  C:010FH         PUBLIC        _Xie_b
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MANG_A
+  -------         DO            
+  D:0007H         SYMBOL        a
+  -------         ENDDO         
+  C:00EAH         LINE#         13
+  C:00EAH         LINE#         14
+  C:00EAH         LINE#         16
+  C:00EDH         LINE#         17
+  C:00EFH         LINE#         18
+  C:00F1H         LINE#         20
+  C:00F1H         LINE#         21
+  C:00F3H         LINE#         22
+  C:00F5H         LINE#         23
+  C:00F7H         LINE#         24
+  C:00FBH         LINE#         25
+  C:00FDH         LINE#         26
+  -------         ENDPROC       MANG_A
+  -------         PROC          _XIE_B
+  D:0006H         SYMBOL        b
+  C:010FH         LINE#         28
+  C:0111H         LINE#         29
+  C:0111H         LINE#         30
+  C:0114H         LINE#         31
+  C:0116H         LINE#         32
+  C:0118H         LINE#         33
+  C:011AH         LINE#         34
+  C:011CH         LINE#         35
+  C:011EH         LINE#         36
+  -------         ENDPROC       _XIE_B
+  -------         PROC          _XIAN_C
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2020  18:10:35  PAGE 3
+
+
+  D:0006H         SYMBOL        c
+  C:011FH         LINE#         38
+  C:0121H         LINE#         39
+  C:0121H         LINE#         40
+  C:0124H         LINE#         41
+  C:0126H         LINE#         42
+  C:0128H         LINE#         43
+  C:012AH         LINE#         44
+  C:012CH         LINE#         45
+  C:012EH         LINE#         46
+  -------         ENDPROC       _XIAN_C
+  -------         PROC          MAIN
+  C:008FH         LINE#         48
+  C:008FH         LINE#         49
+  C:008FH         LINE#         50
+  C:0098H         LINE#         51
+  C:009DH         LINE#         52
+  C:00A2H         LINE#         53
+  C:00A7H         LINE#         54
+  C:00ACH         LINE#         55
+  C:00B1H         LINE#         56
+  C:00BCH         LINE#         57
+  C:00BCH         LINE#         58
+  C:00CDH         LINE#         59
+  C:00CFH         LINE#         60
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?CLDPTR
+  C:00D1H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+Program Size: data=26.0 xdata=0 code=303
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

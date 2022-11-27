@@ -1,0 +1,152 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/25/2020  06:14:03  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE main.obj TO 51 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  51 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         ?DT?MAIN
+                    000EH     0012H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?MAIN
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0010H     UNIT         ?PR?INIT?MAIN
+                    0013H     0008H                  *** GAP ***
+            CODE    001BH     0003H     ABSOLUTE     
+            CODE    001EH     0060H     UNIT         ?PR?MAIN?MAIN
+            CODE    007EH     001BH     UNIT         ?PR?DUAN?MAIN
+            CODE    0099H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   51 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?INIT?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  51 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/25/2020  06:14:03  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0003H         PUBLIC        Init
+  D:00B8H         PUBLIC        IP
+  C:001EH         PUBLIC        main
+  C:007EH         PUBLIC        duan
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A0H.1       PUBLIC        led
+  B:00A8H.3       PUBLIC        ET1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  D:0008H         PUBLIC        c
+  D:00C8H         PUBLIC        T2CON
+  D:000AH         PUBLIC        s
+  D:000CH         PUBLIC        t
+  B:0020H.0       PUBLIC        x
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INIT
+  C:0003H         LINE#         11
+  C:0003H         LINE#         12
+  C:0003H         LINE#         13
+  C:0006H         LINE#         14
+  C:0009H         LINE#         15
+  C:000CH         LINE#         16
+  C:000EH         LINE#         17
+  C:0010H         LINE#         18
+  C:0012H         LINE#         19
+  -------         ENDPROC       INIT
+  -------         PROC          MAIN
+  C:001EH         LINE#         21
+  C:001EH         LINE#         22
+  C:001EH         LINE#         23
+  C:0021H         LINE#         24
+  C:0021H         LINE#         25
+  C:0021H         LINE#         26
+  C:002CH         LINE#         27
+  C:002CH         LINE#         28
+  C:0031H         LINE#         29
+  C:0034H         LINE#         30
+  C:0034H         LINE#         31
+  C:003CH         LINE#         32
+  C:003CH         LINE#         33
+  C:003FH         LINE#         34
+  C:003FH         LINE#         35
+  C:0047H         LINE#         36
+  C:0047H         LINE#         37
+  C:0047H         LINE#         38
+  C:0051H         LINE#         39
+  C:0051H         LINE#         40
+  C:0053H         LINE#         41
+  C:0053H         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/25/2020  06:14:03  PAGE 3
+
+
+  C:0059H         LINE#         43
+  C:0059H         LINE#         44
+  C:005BH         LINE#         45
+  C:005BH         LINE#         46
+  C:0066H         LINE#         47
+  C:0066H         LINE#         48
+  C:006BH         LINE#         49
+  C:006BH         LINE#         50
+  C:0076H         LINE#         51
+  C:0076H         LINE#         52
+  C:0078H         LINE#         53
+  C:007AH         LINE#         55
+  C:007AH         LINE#         56
+  C:007CH         LINE#         57
+  C:007CH         LINE#         58
+  -------         ENDPROC       MAIN
+  -------         PROC          DUAN
+  C:007EH         LINE#         61
+  C:0080H         LINE#         63
+  C:0083H         LINE#         64
+  C:0086H         LINE#         65
+  C:008EH         LINE#         66
+  C:0096H         LINE#         67
+  -------         ENDPROC       DUAN
+  -------         ENDMOD        MAIN
+
+Program Size: data=15.1 xdata=0 code=157
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
